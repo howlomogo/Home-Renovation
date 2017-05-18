@@ -4,6 +4,7 @@ $color--primary: #FFC107;
 
 $color--text: #2C2C2C;
 $color--para: #8D8D8D;
+$color--grey-light: #BDBDBD;
 
 body {
 	color: $color--text;
@@ -276,8 +277,76 @@ input, textarea {
 	}
 }
 
+//- Testimonial
+#testimonial {
+	h5 {
+		color: $color--text !important;
+	}
+
+	.carousel-caption {
+	    top: 0px;
+	    transform: none;
+	    bottom: auto;
+	}
+
+	.carousel-indicators li {
+		background-color: #f5f5f5;
+	}
 
 
+	.carousel-indicators .active {
+	    background-color: $color--primary;
+	}
+}
 
+.footer {
+
+	@media (max-width: 768px) {
+		> * {
+			text-align: center !important;
+		} 
+	}
+
+
+	.ion {
+		font-size: 24px;
+		color: $color--grey-light;
+
+		@extend .px-1;
+		@extend .my-4;
+
+
+		&:hover {
+			animation: pulse 0.3s;
+			-webkit-animation: pulse 0.3s;
+			-moz-animation: pulse 0.3s;
+			-o-animation: pulse 10.3s;
+		}
+		@media (max-width: 768px) {
+			margin-bottom: 16px !important;
+		}
+	}
+
+	p {
+		font-size: 14px;
+		margin-bottom: 0px;
+		text-align: center;
+		@extend .my-4;
+		@media (max-width: 768px) {
+			margin-top: 16px !important;
+			margin-bottom: 16px !important;
+		}
+	}
+
+	img {
+		width: 100px;
+		float: right;
+		@extend .my-4;
+		@media (max-width: 768px) {
+			float: none;
+			margin-top: 16px !important;
+		}
+	}
+}
 
 
