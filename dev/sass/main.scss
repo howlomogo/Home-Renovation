@@ -3,7 +3,11 @@
 $color--primary: #FFC107;
 
 $color--text: #2C2C2C;
+$color--para: #8D8D8D;
 
+body {
+	color: $color--text;
+}
 h1,h2, h3,h4,h5,h6 {
 	font-family: 'Lato', sans-serif;
 	line-height: normal;
@@ -12,6 +16,13 @@ h1,h2, h3,h4,h5,h6 {
 p,a {
 	font-family: 'Source Sans Pro', sans-serif;
 	line-height: normal;
+	color: $color--para;
+}
+
+p {
+	font-weight: 300;
+	letter-spacing: 0.5;
+	line-height: 1.35rem;
 }
 
 h1 {
@@ -40,6 +51,18 @@ h4 {
 	}
 }
 
+.container-small {
+    max-width: 100%;
+    width: 480px;
+}
+
+.hr--header {
+	border: none;
+	border-top: 1px solid $color--primary;
+	width: 80px;
+	margin: 0 auto 16px;
+}
+
 .btn {
 	background-color: $color--primary;
 	border: none;
@@ -51,6 +74,11 @@ h4 {
 	padding: 8px 42px 12px;
 	transition: background-color 0.3s;
 	cursor: pointer;
+
+	&.inverted {
+		border: solid 3px #ffffff;
+		background-color: transparent;
+	}
 
 	&:hover {
 		background-color: lighten($color--primary,10%);
@@ -96,8 +124,89 @@ h4 {
 }
 
 
+//- Banner
+.carousel {
+	position: relative;
+}
+
+.carousel--image {
+	height: 600px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translate(0%, -50%);
+    bottom: auto;
+}
+
+.carousel-indicators li {
+	height: 10px;
+	background-color: #ffffff;
+}
+
+.carousel-indicators .active {
+    background-color: $color--primary;
+}
 
 .work--grid {
 	height: 300px;
 	background-color: red;
 }
+
+
+.section {
+	position: relative;
+	@extend .py-8;
+
+	&.x-pad {
+		@extend .py-9;
+	}
+}
+
+//- Our Services
+.section--our-services {
+	text-align: center;
+
+	img {
+		@extend .mb-4;
+		width: 100%;
+		height: 100%;
+		max-height: 80px;
+		max-width: 80px;
+	}
+
+	h5 {
+		@extend .mb-2;
+		font-weight: bold;
+		letter-spacing: 0.8px;
+	}
+}
+
+
+//- Quote
+.section--quote {
+	@media (max-width: 768px) {
+		text-align: center;
+	}
+	background-color: $color--primary;
+	padding: 48px 0px !important;
+
+	h5 {
+		margin-bottom: 0px;
+		letter-spacing: 1.5;
+		line-height: 28px;
+		color: #ffffff;
+		padding-right: 64px;
+		@media (max-width: 768px) {
+			padding-right: 0px;
+			margin-bottom: 32px;
+		}
+	}
+}
+
+
+
+

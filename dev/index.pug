@@ -5,52 +5,89 @@ html
 		include /_includes/_navigation
 
 		//- Banner
+		#carouselExampleIndicators.carousel.slide(data-ride='carousel')
+			ol.carousel-indicators
+				li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+				li(data-target='#carouselExampleIndicators', data-slide-to='1')
+				li(data-target='#carouselExampleIndicators', data-slide-to='2')
+			.carousel-inner(role='listbox')
+				.carousel-item.active
+					.carousel--image(style="background-image: url('assets/test-bg.jpg');")
+					.carousel-caption.d-none.d-md-block
+						h1 HOME RENOVATIONS
+						hr
+						p Progressive. Personal. Professional. Passionate. Entrust us with your project and you will not be dissapointed!
+				.carousel-item
+					.carousel--image(style="background-image: url('assets/test-bg.jpg');")
+					.carousel-caption.d-none.d-md-block
+						h1 HOME RENOVATIONS
+						hr
+						p Progressive. Personal. Professional. Passionate. Entrust us with your project and you will not be dissapointed!
+				.carousel-item
+					.carousel--image(style="background-image: url('assets/test-bg.jpg');")
+					.carousel-caption.d-none.d-md-block
+						h1 HOME RENOVATIONS
+						hr
+						p Progressive. Personal. Professional. Passionate. Entrust us with your project and you will not be dissapointed!
+			a.carousel-control-prev(data-target='#carouselExampleIndicators', role='button', data-slide='prev')
+				span.carousel-control-prev-icon(aria-hidden='true')
+				span.sr-only Previous
+			a.carousel-control-next(data-target='#carouselExampleIndicators', role='button', data-slide='next')
+				span.carousel-control-next-icon(aria-hidden='true')
+				span.sr-only Next
 
 
-		section
-			.container
+		section.section.section--our-services
+			.container.container-small
 				.row
 					.col-md-12
-						p OUR SERVICES
-						hr
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-
+						h3.mb-2 OUR SERVICES
+						hr.hr--header
+						p.mb-6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+		
+			.container
 				.row
 					.col-md-4
-						img(src="assets/crane.svg")
-						p Home Extensions
-						p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
+						.p-2
+							img(src="assets/crane.svg")
+							h5 Home Extensions
+							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
 					.col-md-4
-						img(src="assets/crane.svg")
-						p Home Extensions
-						p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
+						.p-2
+							img(src="assets/hammer.svg")
+							h5 Home Extensions
+							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
 					.col-md-4
-						img(src="assets/crane.svg")
-						p Home Extensions
-						p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
+						.p-2
+							img(src="assets/door.svg")
+							h5 Home Extensions
+							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
 					.col-md-4
-						img(src="assets/crane.svg")
-						p Home Extensions
-						p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
+						.p-2
+							img(src="assets/window.svg")
+							h5 Home Extensions
+							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
 					.col-md-4
-						img(src="assets/crane.svg")
-						p Home Extensions
-						p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
+						.p-2
+							img(src="assets/paint-brush.svg")
+							h5 Home Extensions
+							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
 					.col-md-4
-						img(src="assets/crane.svg")
-						p Home Extensions
-						p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
+						.p-2
+							img(src="assets/engineer.svg")
+							h5 Home Extensions
+							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
-		section
+		section.section(style="background-image: url('assets/test-bg.jpg'); background-size: cover; background-position: center;")
 			.container
 				.row
 					.col-md-6
-						p ABOUT US
+						h2 ABOUT US
 						hr
 						p WE OFFER THE BEST SERVICE IN THE RENOVATION SECTOR!
 
@@ -60,14 +97,15 @@ html
 						button.btn READ MORE
 
 
-		section
-			.container
+		section.section
+			.container.container-small.text-center
 				.row
 					.col-md-12
-						p FEATURED WORK
-						hr
+						h3.mb-2 FEATURED WORK
+						hr.hr--header
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 
+		section
 			.container-fluid.px-0
 				.row.no-gutters
 					.col-md-3
@@ -87,30 +125,30 @@ html
 					.col-md-3
 						.work--grid
 
-		section
+		section.section.section--quote
 			.container
-				.row
+				.row.align-items-center
 					.col-md-8
-						p LOOKING FOR A QUALITY AND AFFORDABLE RENOVATION FOR YOUR NEXT PROJECT?
+						h5 LOOKING FOR A QUALITY AND AFFORDABLE RENOVATION FOR YOUR NEXT PROJECT?
 					.col-md-4
-						button.btn REQUEST A QUICK QUOTE
+						button.btn.inverted REQUEST A QUICK QUOTE
 
 
-		section
+		section.section.text-center
 			.container
 				.row
 					.col-md-12
-						p TESTIMONIALS
-						hr
+						h3.mb-2 TESTIMONIALS
+						hr.hr--header
 						p “Lorem ipsum dolor sit amet, id quem causae electram pro, est nonumy moderatius dissentias an. Eu nihil omittam his. Virtute eligendi.”
 						P - Dale Cooper, Company Manager
 
 
-		section
+		section.section(style="background-image: url('assets/test-bg.jpg'); background-size: cover; background-position: center;")
 			.container
 				.row
 					.col-md-6
-						p CONTACT
+						h2 CONTACT
 						hr
 						p CALL US FREE ON
 						p 02893 748392
