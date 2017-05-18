@@ -26,7 +26,9 @@ p {
 }
 
 h1 {
-	font-size: 2.25rem;
+	font-size: 4rem;
+	font-weight: 700;
+	letter-spacing: 2px;
 	@media (max-width: 768px) {
 		line-height: normal !important;
 		font-size: 2rem;
@@ -34,6 +36,9 @@ h1 {
 }
 
 h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	letter-spacing: 3px;
 	@media (max-width: 768px) {
 		font-size: 1.75rem;
 	}
@@ -51,16 +56,34 @@ h4 {
 	}
 }
 
+input, textarea {
+	display: block;
+	width: 100%;
+	border: 1px solid #E0E0E0;
+	letter-spacing: 1px;
+
+	@extend .p-1;
+	@extend .px-2;
+}
+
+.color--primary {
+	color: $color--primary !important;
+}
+
 .container-small {
     max-width: 100%;
     width: 480px;
 }
 
-.hr--header {
+.hr--primary {
 	border: none;
 	border-top: 1px solid $color--primary;
 	width: 80px;
 	margin: 0 auto 16px;
+
+	&.hr--left {
+		margin: 0;
+	}
 }
 
 .btn {
@@ -185,6 +208,52 @@ h4 {
 	}
 }
 
+//- About
+.section--about {
+	color: #ffffff;
+	background-image: url('../assets/test-bg.jpg');
+	background-size: cover;
+	background-position: center;
+
+	h3 {
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 100;
+		letter-spacing: 2px;
+		@extend .pr-6;
+	}
+
+	p {
+		letter-spacing: 1.2px;
+		line-height: 1.5rem;
+		color: #ffffff;
+		font-weight: 300;
+		@extend .mb-5;
+	}
+}
+
+//- Contact
+.section--contact {
+	color: #ffffff;
+	background-image: url('../assets/test-bg.jpg');
+	background-size: cover;
+	background-position: center;
+
+	h3 {
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 100;
+		letter-spacing: 2px;
+		@extend .pr-6;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		letter-spacing: 1;
+		line-height: 1.5rem;
+		color: #ffffff;
+		font-weight: 400;
+	}
+}
+
 
 //- Quote
 .section--quote {
@@ -206,6 +275,8 @@ h4 {
 		}
 	}
 }
+
+
 
 
 

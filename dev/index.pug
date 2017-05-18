@@ -29,12 +29,12 @@ html
 						h1 HOME RENOVATIONS
 						hr
 						p Progressive. Personal. Professional. Passionate. Entrust us with your project and you will not be dissapointed!
-			a.carousel-control-prev(data-target='#carouselExampleIndicators', role='button', data-slide='prev')
-				span.carousel-control-prev-icon(aria-hidden='true')
-				span.sr-only Previous
-			a.carousel-control-next(data-target='#carouselExampleIndicators', role='button', data-slide='next')
-				span.carousel-control-next-icon(aria-hidden='true')
-				span.sr-only Next
+			//- a.carousel-control-prev(data-target='#carouselExampleIndicators', role='button', data-slide='prev')
+			//- 	span.carousel-control-prev-icon(aria-hidden='true')
+			//- 	span.sr-only Previous
+			//- a.carousel-control-next(data-target='#carouselExampleIndicators', role='button', data-slide='next')
+			//- 	span.carousel-control-next-icon(aria-hidden='true')
+			//- 	span.sr-only Next
 
 
 		section.section.section--our-services
@@ -42,7 +42,7 @@ html
 				.row
 					.col-md-12
 						h3.mb-2 OUR SERVICES
-						hr.hr--header
+						hr.hr--primary
 						p.mb-6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 		
 			.container
@@ -83,13 +83,13 @@ html
 							h5 Home Extensions
 							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
-		section.section(style="background-image: url('assets/test-bg.jpg'); background-size: cover; background-position: center;")
+		section.section.section--about
 			.container
 				.row
 					.col-md-6
-						h2 ABOUT US
-						hr
-						p WE OFFER THE BEST SERVICE IN THE RENOVATION SECTOR!
+						h2.mb-3 ABOUT US
+						hr.hr--primary.hr--left.mb-3
+						h3 WE OFFER THE BEST SERVICE IN THE RENOVATION SECTOR!
 
 					.col-md-6
 						p Lorem ipsum dolor sit amet, ante tellus libero senectus pharetra. Velit purus metus ac vel purus, eget nulla amet sollicitudin. Suspendisse enim tortor ac fermentum mus lacus, aliquam diam elementum, at vulputate semper consequat odio luctus turpis, curabitur phasellus vestibulum nisl viverra vestibulum tortor, felis elit non commodo pharetra eget felis.
@@ -102,7 +102,7 @@ html
 				.row
 					.col-md-12
 						h3.mb-2 FEATURED WORK
-						hr.hr--header
+						hr.hr--primary
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 
 		section
@@ -139,27 +139,30 @@ html
 				.row
 					.col-md-12
 						h3.mb-2 TESTIMONIALS
-						hr.hr--header
+						hr.hr--primary
 						p “Lorem ipsum dolor sit amet, id quem causae electram pro, est nonumy moderatius dissentias an. Eu nihil omittam his. Virtute eligendi.”
 						P - Dale Cooper, Company Manager
 
 
-		section.section(style="background-image: url('assets/test-bg.jpg'); background-size: cover; background-position: center;")
+		section.section.section--contact
 			.container
 				.row
 					.col-md-6
-						h2 CONTACT
-						hr
+						h2.mb-3 CONTACT
+						hr.hr--primary.hr--left.mb-3
 						p CALL US FREE ON
-						p 02893 748392
-						p 100 LAVANT ROAD, CROYDON, LONDON, CR0 0AJ
-							span INFO@RENOVATIONS.CO.UK
+						h2.color--primary.mb-5 02893 748392
+						p 100 LAVANT ROAD, CROYDON,
+							br
+							| LONDON, CR0 0AJ
+							br
+							span.color--primary INFO@RENOVATIONS.CO.UK
 
 					.col-md-6
-						input(type="text" placeholder="Name*")
-						input(type="text" placeholder="Email*")
-						input(type="text-area" placeholder="Message*")
+						input.mb-2(type="text" placeholder="Name*")
+						input.mb-2(type="text" placeholder="Email*")
+						textarea.mb-2(placeholder="Message*" rows="6")
 
-						button.btn SEND
+						button.btn.w-100 SEND
 
 		include /_includes/_footer
