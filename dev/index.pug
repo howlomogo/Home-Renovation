@@ -12,23 +12,26 @@ html
 				li(data-target='#banner', data-slide-to='2')
 			.carousel-inner(role='listbox')
 				.carousel-item.active
-					.carousel--image(style="background-image: url('assets/test-bg.jpg');")
-					.carousel-caption.d-none.d-md-block
-						h1 HOME RENOVATIONS
+					.carousel--image(style="background-image: url('assets/home-renovation-bg.jpg');")
+					.carousel-caption.d-md-block
+						.carousel--head-container
+							h1 HOME RENOVATIONS
 						hr
 						.carousel--subhead-container
 							h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				.carousel-item
-					.carousel--image(style="background-image: url('assets/test-bg.jpg');")
-					.carousel-caption.d-none.d-md-block
-						h1 HOME RENOVATIONS
+					.carousel--image(style="background-image: url('assets/new-home-bg.jpg');")
+					.carousel-caption.d-md-block
+						.carousel--head-container
+							h1 NEW HOME CONSTRUCTION
 						hr
 						.carousel--subhead-container
 							h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				.carousel-item
-					.carousel--image(style="background-image: url('assets/test-bg.jpg');")
-					.carousel-caption.d-none.d-md-block
-						h1 HOME RENOVATIONS
+					.carousel--image(style="background-image: url('assets/interior-bg.jpg');")
+					.carousel-caption.d-md-block
+						.carousel--head-container
+							h1 INTERIOR &amp; EXTERIOR RENOVATIONS
 						hr
 						.carousel--subhead-container
 							h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -46,14 +49,8 @@ html
 				.row
 					.col-md-4
 						.p-2
-							img(src="assets/crane.svg")
-							h5 Home Extensions
-							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
-
-					.col-md-4
-						.p-2
-							img(src="assets/hammer.svg")
-							h5 Home Extensions
+							img(src="assets/engineer.svg")
+							h5 Home Construction
 							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
 					.col-md-4
@@ -64,20 +61,26 @@ html
 
 					.col-md-4
 						.p-2
+							img(src="assets/hammer.svg")
+							h5 Furnishing Repairs
+							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
+
+					.col-md-4
+						.p-2
 							img(src="assets/window.svg")
-							h5 Home Extensions
+							h5 Exterior Renovation
 							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
 					.col-md-4
 						.p-2
 							img(src="assets/paint-brush.svg")
-							h5 Home Extensions
+							h5 Interior Renovation
 							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
 					.col-md-4
 						.p-2
-							img(src="assets/engineer.svg")
-							h5 Home Extensions
+							img(src="assets/tap.svg")
+							h5 Bathroom &amp; Kitchens
 							p Renovation Contrary to what people might imagine when we talk about bathroom remodeling, it should not have anything to do with
 
 		section#about.section.section--about
@@ -102,7 +105,7 @@ html
 						hr.hr--primary
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 
-		section(style="background-image: url('assets/test-bg.jpg'); background-position: center; background-size: cover;")
+		section(style="background-image: url('assets/home-renovation-bg.jpg'); background-position: center; background-size: cover;")
 			.container-fluid.px-0
 				.row.no-gutters
 					.col-xl-2.col-md-3.col-sm-6
@@ -114,9 +117,9 @@ html
 								.ion.ion-earth
 								.ion.ion-android-share-alt
 							hr
-							h5 BEDROOM
+							h5 CONSERVATORY
 								br
-								| RENOVATION
+								| EXTENSION
 					.col-xl-2.col-md-3.col-sm-6
 						.work--grid(style="background-image: url('assets/p2.jpg');")
 							.work--overlay
@@ -139,9 +142,9 @@ html
 								.ion.ion-earth
 								.ion.ion-android-share-alt
 							hr
-							h5 BEDROOM
+							h5 SHOWER
 								br
-								| RENOVATION
+								| INSTALLATION
 
 					.col-xl-2.col-md-3.col-sm-6
 						.work--grid(style="background-image: url('assets/p4.jpg');")
@@ -152,7 +155,7 @@ html
 								.ion.ion-earth
 								.ion.ion-android-share-alt
 							hr
-							h5 BEDROOM
+							h5 LOUNGE
 								br
 								| RENOVATION
 
@@ -165,7 +168,7 @@ html
 								.ion.ion-earth
 								.ion.ion-android-share-alt
 							hr
-							h5 BEDROOM
+							h5 HOME
 								br
 								| RENOVATION
 
@@ -178,7 +181,7 @@ html
 								.ion.ion-earth
 								.ion.ion-android-share-alt
 							hr
-							h5 BEDROOM
+							h5 DINING ROOM
 								br
 								| RENOVATION
 
@@ -192,7 +195,7 @@ html
 								.ion.ion-earth
 								.ion.ion-android-share-alt
 							hr
-							h5 BEDROOM
+							h5 BATHROOM
 								br
 								| RENOVATION
 
@@ -206,9 +209,9 @@ html
 								.ion.ion-earth
 								.ion.ion-android-share-alt
 							hr
-							h5 BEDROOM
+							h5 LOUNGE
 								br
-								| RENOVATION
+								| EXTENSION
 
 
 		section.section.section--quote
@@ -238,18 +241,18 @@ html
 								li(data-target='#testimonial', data-slide-to='1')
 								li(data-target='#testimonial', data-slide-to='2')
 							.carousel-inner(role='listbox')
-								.carousel-item.active(style="height:180px;")
-									.carousel-caption.d-none.d-md-block.px-2
+								.carousel-item.active
+									.carousel-caption.d-md-block.px-2
 										h5.mb-2 “Lorem ipsum dolor sit amet, id quem causae electram pro, est nonumy moderatius dissentias an. Eu nihil omittam his. Virtute eligendi.”
 										P - Dale Cooper, Company Manager
-								.carousel-item(style="height:180px;")
-									.carousel-caption.d-none.d-md-block.px-2
+								.carousel-item
+									.carousel-caption.d-md-block.px-2
 										h5.mb-2 “Lorem ipsum dolor sit amet, id quem causae electram pro, est nonumy moderatius dissentias an. Eu nihil omittam his. Virtute eligendi.”
-										P - Dale Cooper, Company Manager
-								.carousel-item(style="height:180px;")
-									.carousel-caption.d-none.d-md-block.px-2
+										P - Audrey Horne, Sales Manager
+								.carousel-item
+									.carousel-caption.d-md-block.px-2
 										h5.mb-2 “Lorem ipsum dolor sit amet, id quem causae electram pro, est nonumy moderatius dissentias an. Eu nihil omittam his. Virtute eligendi.”
-										P - Dale Cooper, Company Manager
+										P - Leland Palmer, Company Manager
 
 
 
@@ -261,7 +264,7 @@ html
 						hr.hr--primary.hr--left.mb-3
 						p CALL US FREE ON
 						h2.color--primary.mb-5 02893 748392
-						p 100 LAVANT ROAD, CROYDON,
+						p 100 FAIRCHILDES AVE, CROYDON,
 							br
 							| LONDON, CR0 0AJ
 							br
@@ -273,5 +276,10 @@ html
 						textarea.mb-2(placeholder="Message*" rows="6")
 
 						button.btn.w-100 SEND
+
+
+		section
+			#map
+
 
 		include /_includes/_footer

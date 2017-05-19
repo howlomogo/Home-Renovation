@@ -30,6 +30,10 @@ h1 {
 	font-size: 4rem;
 	font-weight: 700;
 	letter-spacing: 2px;
+	@media (max-width: 992px) {
+		line-height: normal !important;
+		font-size: 3rem;
+	}
 	@media (max-width: 768px) {
 		line-height: normal !important;
 		font-size: 2rem;
@@ -60,8 +64,14 @@ h4 {
 input, textarea {
 	display: block;
 	width: 100%;
-	border: 1px solid #E0E0E0;
+	border: 2px solid #E0E0E0;
 	letter-spacing: 1px;
+	transition: 0.5s border;
+	outline: none;
+
+	&:focus {
+		border: 2px solid $color--primary;
+	}
 
 	@extend .p-1;
 	@extend .px-2;
@@ -117,14 +127,23 @@ input, textarea {
 .navbar-nav {
 	.nav-item {
 		a.nav-link {
+			font-family: 'Lato', sans-serif;
 			font-weight: bold;
-			font-size: 1rem;
-			padding: 1.5rem;
+			font-size: 0.85rem;
+			padding: 1.5rem 1.25rem;
 		    -webkit-transition: color 0.5s;
 		    transition: color 0.5s;
+		    letter-spacing: 1px;
 
 			@media (max-width: 992px) {
 				text-align: center;	
+			}
+		}
+		&:last-child {
+			a.nav-link {
+				@media (min-width: 992px) {
+					padding-right: 0px !important;
+				}
 			}
 		}
 	}
@@ -151,9 +170,14 @@ input, textarea {
 //- Banner
 #banner {
 	hr {
-		border-top: 2px solid #ffffff;
+		border-top: 1px solid #ffffff;
 		width: 200px;
 		@extend .mb-4;
+
+		@media (max-width: 768px) {
+			width: 100px;
+			margin-bottom: 16px !important;
+		}
 	}
 
 	.carousel--subhead-container {
@@ -161,10 +185,19 @@ input, textarea {
 		max-width: 580px;
 		margin: 0 auto;
 	}
+
+	.carousel--head-container {
+		width: 100%;
+		max-width: 760px;
+		margin: 0 auto;
+	}
 	
 	h4 {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
+		@media (max-width: 768px) {
+			font-size: 1rem;
+		}
 	}
 }
 
@@ -211,6 +244,10 @@ input, textarea {
     	z-index: 1;
     	opacity: 0;
     	letter-spacing: 2px;
+
+		@media (max-width: 576px) {
+			opacity: 1;
+		}
     }
 
     hr {
@@ -221,6 +258,9 @@ input, textarea {
     	left: 24px;
     	z-index: 1;
     	opacity: 0;
+		@media (max-width: 576px) {
+			opacity: 1;
+		}
     }
 
 
@@ -233,8 +273,13 @@ input, textarea {
 	    	color: #ffffff;
 	    	font-size: 32px;
 	    	margin-right: 8px;
+
+			@media (max-width: 576px) {
+				opacity: 1;
+			}
 	    }
 	}
+
 
     .work--overlay {
     	position: absolute;
@@ -248,43 +293,52 @@ input, textarea {
     	transition: 0.4s all;
     	border-radius: 100%;
     	z-index: 0;
+		@media (max-width: 576px) {
+			opacity: 1;
+			height: 150%;
+			width: 150%;
+    		background-color: rgba(44, 44, 44, 0.7);
+		}
     }
 
     &:hover {
-	    .work--overlay {
-	    	border-radius: 100%;
-	    	height: 150%;
-	    	width: 150%;
-	    	opacity: 1;
-	    }
+    	@media (min-width: 576px) {
+		    .work--overlay {
+		    	border-radius: 100%;
+		    	height: 150%;
+		    	width: 150%;
+		    	opacity: 1;
+		    }
 
-	    h5 {
-			animation: fadeInUp 0.3s;
-			-webkit-animation: fadeInUp 0.3s;
-		    animation-fill-mode: forwards;
-		    -webkit-animation-fill-mode: forwards;
-	    }
-
-	    hr {
-			animation: fadeIn 0.3s;
-			-webkit-animation: fadeIn 0.3s;
-		    animation-fill-mode: forwards;
-			-webkit-animation-fill-mode: forwards;
-		    -webkit-animation-delay: 0.5s;
-		    animation-delay: 0.5s;
-	    }
-		.work--icons-container {
-			.ion {
+		    h5 {
 				animation: fadeInUp 0.3s;
 				-webkit-animation: fadeInUp 0.3s;
 			    animation-fill-mode: forwards;
 			    -webkit-animation-fill-mode: forwards;
-			}
+		    }
 
-			@for $i from 1 through 4 {
-				.ion:nth-child(#{$i}) {
-				    -webkit-animation-delay: 0.1s * $i;
-				    animation-delay: 0.1s * $i;
+		    hr {
+				animation: fadeIn 0.3s;
+				-webkit-animation: fadeIn 0.3s;
+			    animation-fill-mode: forwards;
+				-webkit-animation-fill-mode: forwards;
+			    -webkit-animation-delay: 0.5s;
+			    animation-delay: 0.5s;
+		    }
+			.work--icons-container {
+				.ion {
+					animation: fadeInUp 0.3s;
+					-webkit-animation: fadeInUp 0.3s;
+				    animation-fill-mode: forwards;
+				    -webkit-animation-fill-mode: forwards;
+				    cursor: pointer;
+				}
+
+				@for $i from 1 through 4 {
+					.ion:nth-child(#{$i}) {
+					    -webkit-animation-delay: 0.1s * $i;
+					    animation-delay: 0.1s * $i;
+					}
 				}
 			}
 		}
@@ -318,12 +372,18 @@ input, textarea {
 		font-weight: bold;
 		letter-spacing: 0.8px;
 	}
+
+	@media (max-width: 768px) {
+		img {
+			margin-bottom: 24px !important;
+		}
+	}
 }
 
 //- About
 .section--about {
 	color: #ffffff;
-	background-image: url('../assets/test-bg.jpg');
+	background-image: url('../assets/interior-bg.jpg');
 	background-size: cover;
 	background-position: center;
 
@@ -341,12 +401,34 @@ input, textarea {
 		font-weight: 300;
 		@extend .mb-5;
 	}
+
+	@media (max-width: 768px) {
+		text-align: center;
+
+		hr {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		h3 {
+			padding-right: 0px !important;
+			font-size: 1.25rem;
+			margin-bottom: 16px;
+		}
+	}
+}
+
+
+//- Map
+#map {
+	height: 400px;
+	width: 100%;
 }
 
 //- Contact
 .section--contact {
 	color: #ffffff;
-	background-image: url('../assets/test-bg.jpg');
+	background-image: url('../assets/home-renovation-bg.jpg');
 	background-size: cover;
 	background-position: center;
 
@@ -363,6 +445,15 @@ input, textarea {
 		line-height: 1.5rem;
 		color: #ffffff;
 		font-weight: 400;
+	}
+
+	@media (max-width: 768px) {
+		text-align: center;
+
+		hr {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
 	}
 }
 
@@ -392,6 +483,19 @@ input, textarea {
 #testimonial {
 	h5 {
 		color: $color--text !important;
+		line-height: 28px;
+		@media (max-width: 576px) {
+			font-size: 0.9rem;
+			line-height: 20px;
+		}
+	}
+
+	.carousel-item {
+		height: 180px;
+
+		@media (max-width: 768px) {
+			height: 260px;
+		}
 	}
 
 	.carousel-caption {
@@ -431,7 +535,7 @@ input, textarea {
 			animation: pulse 0.3s;
 			-webkit-animation: pulse 0.3s;
 			-moz-animation: pulse 0.3s;
-			-o-animation: pulse 10.3s;
+			-o-animation: pulse 0.3s;
 		}
 		@media (max-width: 768px) {
 			margin-bottom: 16px !important;
